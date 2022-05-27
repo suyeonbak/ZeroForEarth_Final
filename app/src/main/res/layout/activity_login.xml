@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#E8E8CC"
+    tools:context=".activity.LoginActivity"
+    tools:ignore="ExtraText">
+
+
+    <Button
+        android:id="@+id/Bossbutton"
+        android:layout_width="197dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="#A2B38B"
+        android:text="사장님으로 가입할래요"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/Customerbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Customerbutton"
+        android:layout_width="197dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="#A2B38B"
+        android:text="고객님으로 가입할래요"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bossbutton" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

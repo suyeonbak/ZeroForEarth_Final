@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8CC"
+    tools:context=".activity.BossJoinActivity">
+
+
+    <Button
+        android:id="@+id/nextbutton"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="283dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="55dp"
+        android:background="@drawable/shape"
+        android:backgroundTint="#A2B38B"
+        android:text="다음"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="상점정보 입력"
+        app:titleMarginStart="145dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="50dp"
+        android:ellipsize="end"
+        android:ems="10"
+        android:hint="전화번호 입력하세요"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopnumber"
+        app:layout_constraintTop_toBottomOf="@+id/addressEditText" />
+
+    <EditText
+        android:id="@+id/closeTime"
+        android:layout_width="88dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="종료시간"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="19dp"
+        android:text="상점운영시간"
+        app:layout_constraintEnd_toStartOf="@+id/openTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopnumber" />
+
+    <TextView
+        android:id="@+id/shopaddress"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="19dp"
+        android:text="상점주소"
+        app:layout_constraintEnd_toStartOf="@+id/addressEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopname" />
+
+    <TextView
+        android:id="@+id/shopnumber"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="19dp"
+        android:text="상점전화번호"
+        app:layout_constraintEnd_toStartOf="@+id/phoneNumberEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shopaddress" />
+
+    <EditText
+        android:id="@+id/openTime"
+        android:layout_width="89dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="31dp"
+        android:ems="10"
+        android:hint="시작시간"
+        android:inputType="time"
+        app:layout_constraintEnd_toStartOf="@+id/wave"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
+
+    <TextView
+        android:id="@+id/shopname"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="19dp"
+        android:text="상점명"
+        app:layout_constraintEnd_toStartOf="@+id/marketnameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/marketnameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="상점명을 입력하세요"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopname"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/shopcategory"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="189dp"
+        android:text="상점종류"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="#000000"
+        android:entries="@array/Shopcategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopcategory"
+        app:layout_constraintTop_toBottomOf="@+id/wave" />
+
+    <EditText
+        android:id="@+id/addressEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:hint="주소를 입력하세요"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/shopaddress"
+        app:layout_constraintTop_toBottomOf="@+id/marketnameEditText" />
+
+    <TextView
+        android:id="@+id/wave"
+        android:layout_width="38dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="31dp"
+        android:gravity="center|center_horizontal"
+        android:text="~"
+        app:layout_constraintStart_toEndOf="@+id/openTime"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumberEditText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
